@@ -15,6 +15,8 @@
 //  source: http://github.com/rubystream/alchemist.js/
 //
 
-var Alchemist = (function( {
+// Top level namespace for Alchemist framework
+var Alchemist = {};
 
-} ))();
+Alchemist.version = "0.0.1";
+
