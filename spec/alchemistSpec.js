@@ -24,7 +24,14 @@ describe("Alchemist", function(){
         });
 
         describe("distance conversation", function() {
-            expect(Alchemist.convert(1, "m").to("cm")).toEqual(100);
+            it("should convert m to foot",function() {
+                expect(Alchemist.convert(2, "m").to("foot")).toEqual(0.3048*2);
+            });
+
+            it("should convert foot to m",function() {
+                expect(Alchemist.convert(2, "foot").to("m")).toEqual( (1 / 0.3048)*2);
+            });
+
         });
     });
 
