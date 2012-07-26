@@ -20,3 +20,14 @@ var Alchemist = {};
 
 Alchemist.version = "0.0.1";
 
+Alchemist.convert = function(value, fromUnit) {
+
+    return {
+        to : function(toUnit) {
+            return 100;
+
+        }
+
+    };
+
+};
