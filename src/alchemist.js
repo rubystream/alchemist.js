@@ -626,11 +626,18 @@ Alchemist.convert = function(value, fromUnit) {
     for (type in conversions) {
         if (conversions.hasOwnProperty(type)) {
             if ((unit = conversions[type][fromUnit])) {
-                var etalon;
-                for (etalon in conversions[type]) {
-                    break;
+
+                if (unit instanceof Array) {
+                    betweenUnit = unit[0](value);
                 }
-                betweenUnit = value * (conversions[type][etalon] / unit) ;
+                else
+                {
+                    var etalon;
+                    for (etalon in conversions[type]) {
+                        break;
+                    }
+                    betweenUnit = value * (conversions[type][etalon] / unit) ;
+                }
                 unitType = type;
             }
         }
@@ -640,7 +647,12 @@ Alchemist.convert = function(value, fromUnit) {
         to : function(toUnit) {
             if (betweenUnit && unitType) {
                 if ( (unit = conversions[unitType][toUnit]) ) {
-                    return (betweenUnit * unit);
+                    if (unit instanceof Array) {
+                        return (unit[1](betweenUnit));
+                    } else {
+
+                        return (betweenUnit * unit);
+                    }
                 }
                 throw new Error("unrecognized to-unit type");
             } else {

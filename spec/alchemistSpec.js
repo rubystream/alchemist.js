@@ -67,34 +67,9 @@ describe("Alchemist", function(){
 
         describe("temperature" , function() {
             it("should convert celsius to fahrenheit", function() {
-                expect(Alchemist.convert(36.5, "celsius").to("fahrenheit")).toEqual( 97.7 );
+                expect(Alchemist.convert(36.5, "celsius").to("fahrenheit")).toBeCloseTo( 97.7, 0.01 );
             });
         });
-
-    // capacitance : {
-    // distance : {
-    // dose_equivalent : {
-    // electric_charge : {
-    // electric_conductance : {
-    // electrical_impedance : {
-    // electromotive_force : {
-    // energy : {
-    // force : {
-    // illuminance : {
-    // inductance : {
-    // information_storage : {
-    // luminous_flux : {
-    // luminous_intensity : {
-    // magnetic_flux : {
-    // magnetic_inductance : {
-    // mass : {
-    // power : {
-    // pressure : {
-    // radioactivity : {
-    // temperature : {
-    // time : {
-    // volume : {
-
     });
 
 });
