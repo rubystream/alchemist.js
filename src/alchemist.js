@@ -623,10 +623,14 @@ Alchemist.convert = function(value, fromUnit) {
         type,
         unit;
 
-    for(type in conversions) {
+    for (type in conversions) {
         if (conversions.hasOwnProperty(type)) {
             if ((unit = conversions[type][fromUnit])) {
-                betweenUnit = value * unit;
+                var etalon;
+                for (etalon in conversions[type]) {
+                    break;
+                }
+                betweenUnit = value * (conversions[type][etalon] / unit) ;
                 unitType = type;
             }
         }
