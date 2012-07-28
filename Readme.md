@@ -11,13 +11,13 @@ This work was inspired by ruby gem with similar name. It is not my attention to 
 
 Ince you include _Alchemist.js_ in your code you can usit it like:
 
-``
+```javascript
 var foots = Alchemist.convert(2, "m").to("foot"),
     radians = Alchemist.convert(25, "degrees").to("radians"),
     degrees = Alchemist.convert(25, "arcminute").to("degrees"),
     ares = Alchemist.convert(2500, "square\_foot").to("ares"),
     fahrenheits = Alchemist.convert(36.5, "celsius").to("fahrenheit");
-``
+```
 
 ## Alchemist.js has conversions for:
 
