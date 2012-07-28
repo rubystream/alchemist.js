@@ -629,9 +629,7 @@ Alchemist.convert = function(value, fromUnit) {
 
                 if (unit instanceof Array) {
                     betweenUnit = unit[0](value);
-                }
-                else
-                {
+                } else {
                     var etalon;
                     for (etalon in conversions[type]) {
                         break;
@@ -650,7 +648,6 @@ Alchemist.convert = function(value, fromUnit) {
                     if (unit instanceof Array) {
                         return (unit[1](betweenUnit));
                     } else {
-
                         return (betweenUnit * unit);
                     }
                 }
