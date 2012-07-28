@@ -17,7 +17,7 @@ var foots = Alchemist.convert(2, "m").to("foot"),
     degrees = Alchemist.convert(25, "arcminute").to("degrees"),
     ares = Alchemist.convert(2500, "square\_foot").to("ares"),
     fahrenheits = Alchemist.convert(36.5, "celsius").to("fahrenheit");
-````
+``
 
 ## Alchemist.js has conversions for:
 
