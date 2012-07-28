@@ -9,7 +9,7 @@ This work was inspired by ruby gem with similar name. It is not my attention to 
 
 ## Usage
 
-Ince you include _Alchemist.js_ in your code you can usit it like:
+Once you include _Alchemist.js_ in your code you can usit it like:
 
 ```javascript
 var foots = Alchemist.convert(2, "m").to("foot"),
